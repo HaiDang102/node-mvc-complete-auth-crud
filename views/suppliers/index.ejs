@@ -1,36 +1,35 @@
 <%- include('../partials/header') %>
-
-    <h2>Danh sách Suppliers</h2>
-    <a href="/suppliers/new" class="btn btn-primary mb-3">Thêm Supplier</a>
-
-    <table class="table table-bordered">
+    <h2>Danh sách Nhà cung cấp</h2>
+    <a href="/suppliers/new">+ Thêm nhà cung cấp</a>
+    <table>
         <thead>
             <tr>
-                <th>Tên</th>
-                <th>Địa chỉ</th>
-                <th>SĐT</th>
-                <th>Hành động</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            <% suppliers.forEach(supplier => { %>
+            <% suppliers.forEach(s => { %>
                 <tr>
                     <td>
-                        <%= supplier.name %>
+                        <%= s.name %>
                     </td>
                     <td>
-                        <%= supplier.address %>
+                        <%= s.address || '' %>
                     </td>
                     <td>
-                        <%= supplier.phone %>
+                        <%= s.phone || '' %>
                     </td>
                     <td>
-                        <a href="/suppliers/<%= supplier._id %>/edit" class="btn btn-warning btn-sm">Sửa</a>
-                        <a href="/suppliers/<%= supplier._id %>/delete" class="btn btn-danger btn-sm">Xóa</a>
+                        <a href="/suppliers/<%= s._id %>/edit">Edit</a>
+                        <form method="POST" action="/suppliers/<%= s._id %>?_method=DELETE" style="display:inline">
+                            <button type="submit">Delete</button>
+                        </form>
                     </td>
                 </tr>
                 <% }) %>
         </tbody>
     </table>
-
     <%- include('../partials/footer') %>
