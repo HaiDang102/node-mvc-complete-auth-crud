@@ -1,0 +1,9 @@
+<%- include('../partials/header') %>
+<h2>Sửa Nhà cung cấp</h2>
+<form method="POST" action="/suppliers/<%= supplier._id %>?_method=PUT">
+  <label>Name</label><br><input name="name" value="<%= supplier.name %>" required><br>
+  <label>Address</label><br><input name="address" value="<%= supplier.address %>"><br>
+  <label>Phone</label><br><input name="phone" value="<%= supplier.phone %>"><br>
+  <button type="submit">Cập nhật</button>
+</form>
+<%- include('../partials/footer') %>

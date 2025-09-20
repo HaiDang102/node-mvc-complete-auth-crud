@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+
+    <div class="container mt-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold">Node MVC CRUD Demo</h1>
+            <p class="lead text-muted">Quản lý sản phẩm và nhà cung cấp dễ dàng, nhanh chóng và trực quan</p>
+        </div>
+
+        <div class="row justify-content-center g-4">
+            <div class="col-md-5">
+                <div class="card shadow-sm border-0 h-100 text-center">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <i class="bi bi-people-fill display-1 text-primary mb-3"></i>
+                        <h4 class="card-title mb-3">Quản lý Suppliers</h4>
+                        <p class="card-text text-muted">Thêm, sửa, xóa và theo dõi tất cả nhà cung cấp của bạn một cách dễ dàng.</p>
+                        <a href="/suppliers" class="btn btn-primary mt-3">Đi đến Suppliers</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="card shadow-sm border-0 h-100 text-center">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <i class="bi bi-box-seam display-1 text-success mb-3"></i>
+                        <h4 class="card-title mb-3">Quản lý Products</h4>
+                        <p class="card-text text-muted">Thêm, sửa, xóa và quản lý sản phẩm một cách nhanh chóng và trực quan.</p>
+                        <a href="/products" class="btn btn-success mt-3">Đi đến Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
